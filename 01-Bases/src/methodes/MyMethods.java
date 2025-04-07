@@ -114,8 +114,42 @@ public class MyMethods {
     }
 
     //Méthode qui renvoie la somme des éléments d'un tableau d'entiers
+
+    public static int sommeTableau(int[] tab){
+        int s = 0;
+        for(int i : tab){
+           s += i;
+        }
+
+        return s;
+    }
+
     //Méthode qui renvoie la moyenne des éléments d'un tableau d'entiers
+
+    public static double moyenneTableau(int[] tab){
+        double s = sommeTableau(tab);
+
+        return s / tab.length;
+    }
+
     //Méthode qui renvoie l'élément le plus petit d'un tableau d'entiers
+
+    public static int minTableau(int[] tab){
+
+        //int m = Integer.MAX_VALUE;
+        int m = tab[0];
+//        for(int e : tab){
+//            if(e < m)
+//                m = e;
+//        }
+
+        for (int i = 1; i < tab.length; i++) {
+            if(tab[i] < m)
+                m = tab[i];
+        }
+
+        return m;
+    }
 
 
 

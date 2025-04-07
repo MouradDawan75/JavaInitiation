@@ -49,6 +49,12 @@ public class App {
         System.out.println(MyMethods.sum(10,20,30));
         System.out.println(MyMethods.sum(10,20,30,40));
 
+        int[] t = {1,2};
+        System.out.println(MyMethods.moyenneTableau(t));
+        System.out.println("Somme tab = "+MyMethods.sommeTableau(tab));
+        System.out.println("Moyenne tab = "+MyMethods.moyenneTableau(tab));
+        System.out.println("Min tab = "+MyMethods.minTableau(tab));
+
 
 
     }
