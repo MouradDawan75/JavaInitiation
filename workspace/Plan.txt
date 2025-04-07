@@ -1,7 +1,13 @@
 01-Bases:
+
 >> DataType
 >> FormattageChaines
 >> Opérateurs
 >> Conditions
 >> Boucles
 >> Exo
+>> Tableaux
+>> Les Enum
+>> Les méthodes
+
+
