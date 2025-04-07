@@ -1,0 +1,7 @@
+01-Bases:
+>> DataType
+>> FormattageChaines
+>> Opérateurs
+>> Conditions
+>> Boucles
+>> Exo
