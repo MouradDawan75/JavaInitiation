@@ -1,4 +1,4 @@
-package src.heritage;
+package src.heritage_polymorphisme;
 
 import java.io.Serializable;
 

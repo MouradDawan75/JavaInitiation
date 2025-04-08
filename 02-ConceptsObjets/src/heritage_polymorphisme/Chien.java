@@ -1,4 +1,4 @@
-package src.heritage;
+package src.heritage_polymorphisme;
 
 public class Chien extends Animal{
 

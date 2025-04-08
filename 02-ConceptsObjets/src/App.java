@@ -7,12 +7,10 @@ import src.association.Adresse;
 import src.association.Client;
 import src.encapsulation.CompteBancaire;
 import src.encapsulation.Rectangle;
-import src.heritage.Animal;
-import src.heritage.Chat;
-import src.heritage.Chien;
-import src.heritage.Giraffe;
-
-import java.lang.reflect.Type;
+import src.heritage_polymorphisme.Animal;
+import src.heritage_polymorphisme.Chat;
+import src.heritage_polymorphisme.Chien;
+import src.heritage_polymorphisme.Giraffe;
 
 public class App {
 
