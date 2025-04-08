@@ -1,7 +1,16 @@
 package src;
 
+import src.abstraction.Femme;
+import src.abstraction.Homme;
+import src.abstraction.Personne;
+import src.association.Adresse;
+import src.association.Client;
 import src.encapsulation.CompteBancaire;
 import src.encapsulation.Rectangle;
+import src.heritage.Animal;
+import src.heritage.Chat;
+import src.heritage.Chien;
+import src.heritage.Giraffe;
 
 import java.lang.reflect.Type;
 
@@ -57,6 +66,8 @@ public class App {
         Concepts Objets: Encapsulation - Héritage - Polymorphisme - Abstraction - Association (Composition)
          */
 
+        System.out.println("*************************Encapsulation");
+
         double hauteur =10;
         double largeur = 15;
         double surf = surface(hauteur,largeur);
@@ -92,12 +103,81 @@ public class App {
 
         cpt1 = null;
 
-        System.gc(); //appel expilicte du Garbage collector qui garantit pas son passage immédiat
+        System.gc(); //appel explicite du Garbage collector qui ne garantit pas son passage immédiat
+
+        System.out.println("*************************Héritage");
+
+        /*
+        Classe mère: définie une structure de base. Contient les attributs et les méthodes communs aux classes filles
+        Classe fille:
+        - En plus des attributs définis dans la classe mère, elle peut avoir des attributq qui lui sont spécifiques
+        - En plus des méthodes définies dans la classe mère, elle peut avoir des méthodes qui lui sont spécifiques
+        - En cas de besoin, une classe peut surcharger les méthodes définies dans la classe mère
+         */
+
+        Chat c = new Chat("c", 3, "gris");
+        c.dormir();
+        c.emettreSon();
+
+
+        System.out.println("*************************Polymorphisme");
+
+        /*
+        Polymorphisme: c'est le fait qu'un objet puisse prendre plusieurs. C'est une conséquence de l'héritage
+        c'est e fait que l'objet parent peut la forme de tous les objets enfants
+         */
+
+        Object obj = 10;
+        Object obj1 = "10";
+        Object obj2 = new Animal();
+
+        Animal a = new Animal();
+        Animal a1 = new Chat();
+        Animal a2 = new Chien();
+
+        //Collection polymorphique
+        Animal[] animaux = new Animal[10];
+        animaux[0] = new Animal();
+        animaux[1] = new Chat();
+        animaux[2] = new Chien();
+        animaux[3] = new Giraffe();
+
+        son(new Animal());
+        son(new Chat());
+        son(new Chien());
+        son(new Giraffe());
+
+        System.out.println("*************************Abstraction");
+
+        Homme h = new Homme();
+        Femme f = new Femme();
+        Personne p = new Homme();
+
+        Homme h2 = new Homme("nom", "prenom");
+
+        System.out.println("*************************Polymorphisme");
+
+        Client cl = new Client("Dawan", new Adresse(15, "Rue Machin 75001 Paris"));
 
 
     }
 
     private static double surface(double hauteur, double largeur) {
         return hauteur * largeur;
+    }
+
+    //Méthode polymorphique
+    //Poymorphisme par sous typage
+
+    public static void son(Animal a){
+        a.emettreSon();
+    }
+
+    //Polymorphisme ad-hoc: non recommandé a cause du cast qui risque de générer une exception
+    public static void son2(Object o){
+        if(o instanceof Animal){
+            Animal a = (Animal) o;
+            a.emettreSon();
+        }
     }
 }
