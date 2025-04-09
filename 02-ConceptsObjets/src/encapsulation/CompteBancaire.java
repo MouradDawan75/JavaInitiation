@@ -1,5 +1,7 @@
 package src.encapsulation;
 
+import src.exceptions.SoldeException;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -53,9 +55,9 @@ public class CompteBancaire extends Object implements Serializable {
         this.solde += montant;
     }
 
-    public void retrait(double montant) throws Exception {
+    public void retrait(double montant) throws SoldeException {
         if(this.solde < montant)
-            throw new Exception("Solde insuffisant......");
+            throw new SoldeException("Solde insuffisant......");
 
         this.solde += montant;
     }

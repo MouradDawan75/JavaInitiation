@@ -92,10 +92,7 @@ public class App {
                                 System.out.println(ex.getMessage());
                             }
                             break;
-
                     }
-
-
                     break;
 
                 case 2:
@@ -109,8 +106,6 @@ public class App {
                 default:
                     System.out.println("Choix invalide");
                     break;
-
-
             }
 
         }

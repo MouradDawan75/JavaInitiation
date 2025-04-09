@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/01-Bases.iml" filepath="$PROJECT_DIR$/.idea/01-Bases.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/02-ConceptsObjets.iml" filepath="$PROJECT_DIR$/.idea/02-ConceptsObjets.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/03-Exceptions.iml" filepath="$PROJECT_DIR$/.idea/03-Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/04-ClasseString.iml" filepath="$PROJECT_DIR$/.idea/04-ClasseString.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>
