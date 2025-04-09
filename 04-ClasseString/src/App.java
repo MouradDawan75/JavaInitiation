@@ -46,9 +46,25 @@ public class App {
 
         //Méthode qui renvoie le nbre de mots dans une chaine
 
+        System.out.println(MyMethods.nombreMots("ceci est une chaine"));
+
         //Méthode pour inverser une chaine
 
+        System.out.println(MyMethods.inverserChaine("hello"));
+
         //Méthode qui vérifie si une chaine est un palindrôme: sms, sos.....
+
+        System.out.println(MyMethods.verifPalindrome("Sms"));
+
+        System.out.println(">>>>>>>>>> StringBuilder:");
+
+        //Contrairement au Type String, StringBuilder est muable: 1 seul objet en mémoire
+
+        StringBuilder sb = new StringBuilder("test");
+
+        sb.append("e");
+
+        System.out.println(sb.toString());
 
     }
 }
