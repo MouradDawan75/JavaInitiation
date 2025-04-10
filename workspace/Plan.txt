@@ -1,14 +1,14 @@
 01-Bases:
 
->> DataType
->> FormattageChaines
->> Opérateurs
->> Conditions
->> Boucles
->> Exo
->> Tableaux
->> Les Enum
->> Les méthodes
+    >> DataType
+    >> FormattageChaines
+    >> Opérateurs
+    >> Conditions
+    >> Boucles
+    >> Exo
+    >> Tableaux
+    >> Les Enum
+    >> Les méthodes
 
 02-Concepts Objets
 
