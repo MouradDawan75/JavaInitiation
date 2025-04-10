@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 public class Product implements Serializable{
 
+    //clé de chiffrage: si clé différente lors de la désérialisation -> une exception est générée
+    private static final long serialVersionUID = 42L;
+
     private int id;
     private String nom;
     private double prix;

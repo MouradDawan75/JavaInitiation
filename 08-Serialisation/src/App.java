@@ -20,7 +20,7 @@ public class App {
         prods.add(new Product(3, "Table", 50));
 
         System.out.println(">>>>>>>>> Sérialisation binaire:");
-        SerialTool.exportBin("products.bin", prods);
+       // SerialTool.exportBin("products.bin", prods);
 
         for(Product p : SerialTool.importBin("products.bin"))
             System.out.println(p);
@@ -46,6 +46,16 @@ public class App {
 
         for(Product p : SerialTool.importJacksonJson("products_jackson.json"))
             System.out.println(p);
+
+        System.out.println(">>>>>>>>> Sérialisation csv:");
+        try {
+            SerialTool.exportCsv("products.csv", prods, ";");
+            for(Product p : SerialTool.importCsv("products.csv", ";"))
+                System.out.println(p);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
 
 
     }

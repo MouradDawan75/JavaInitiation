@@ -161,23 +161,47 @@ public class SerialTool {
 
     //Méthode de sérialiation csv
 
-    public static void exportCsv(String chemin, List<Product> lst){
+    public static void exportCsv(String chemin, List<Product> lst, String separateur) throws Exception {
 
-    }
+        if (separateur.equals(".")) {
+            throw new Exception("Séparateur différent du point.");
+        }
+
+        FileWriter fw = new FileWriter(chemin);
+        for (Product p : lst) {
+            fw.write(p.getId() + separateur + p.getNom() + separateur + p.getPrix() + "\n");
+        }
+
+            fw.close();
+
+        }
+
 
 
     //Méthode de désérialisation csv
 
-    public static List<Product> importCsv(String chemin){
+    public static List<Product> importCsv(String chemin, String separateur) throws Exception {
 
-        try {
-            List<Product> lst = new ArrayList<>();
-
-
-            return lst;
-        }catch (Exception e){
-            e.printStackTrace();
-            return null;
+        if (separateur.equals(".")) {
+            throw new Exception("Séparateur différent du point.");
         }
+        List<Product> lst = new ArrayList<>();
+        BufferedReader br = new BufferedReader(new FileReader(chemin));
+        String ligne = br.readLine();
+
+        while (ligne != null) {
+
+            //convertir la ligne en Product -> insérer le Product dans la liste
+            String[] tab = ligne.split(separateur);
+            Product p = new Product(Integer.parseInt(tab[0]), tab[1], Double.parseDouble(tab[2]));
+            lst.add(p);
+
+            ligne = br.readLine();
+        }
+
+        br.close();
+        return lst;
+
     }
 }
+
