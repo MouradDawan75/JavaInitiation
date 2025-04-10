@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/05-Dates.iml" filepath="$PROJECT_DIR$/.idea/05-Dates.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/06-Collections.iml" filepath="$PROJECT_DIR$/.idea/06-Collections.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/07-Fichiers.iml" filepath="$PROJECT_DIR$/.idea/07-Fichiers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/08-Serialisation.iml" filepath="$PROJECT_DIR$/.idea/08-Serialisation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>

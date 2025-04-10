@@ -20,4 +20,6 @@
 
 06-Collections
 
-07-Fichiers
+07-Fichiers: textes (flux binaire et flux texte) - Fichier .properties
+
+08-Sérialisation
