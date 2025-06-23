@@ -1,6 +1,5 @@
 package Methodes;
 
-import java.beans.XMLEncoder;
 
 public class app {
 
@@ -28,7 +27,34 @@ public class app {
         int[] tab = {10,2,5,17,25};
         MesMethodes.afficher(tab);
 
+        System.out.println("Moyenne = "+MesMethodes.moyenneTableau(new int[]{1, 2}));
 
+        MesMethodes.triCroissantTableau(tab);
+        MesMethodes.afficher(tab);
+
+        System.out.println(">>>>>>>> changeInt():");
+        int valeur1 = 10;
+        MesMethodes.changeInt(10);
+        MesMethodes.changeInt(valeur1);
+
+        System.out.println(valeur1);
+
+        MesMethodes.changeTableau(tab);
+
+        MesMethodes.afficher(tab);
+
+        valeur1 = MesMethodes.changeIntValue(valeur1);
+
+        System.out.println(MesMethodes.sommeVariable(10,20));
+        System.out.println(MesMethodes.sommeVariable(10,20,30));
+        System.out.println(MesMethodes.sommeVariable(10,20,30,40));
+
+        /*
+        Convention de nommage:
+        PascalCase: MesMethodes -> classes et packages
+        camelCase: méthodes et variables
+        snake_case: convention utilisée par Python
+         */
 
 
 

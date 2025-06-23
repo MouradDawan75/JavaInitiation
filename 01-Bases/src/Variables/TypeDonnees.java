@@ -42,6 +42,18 @@ public class TypeDonnees {
         System.out.println(myInt);
 
         //Constante: est une variable dont le contenu ne peut pas être modifiée:
+        /*
+        Convention de nommage: le nom d'une constante est majuscules
+
+         /*
+        Convention de nommage:
+        PascalCase: MesMethodes -> classes et packages
+        camelCase: méthodes et variables
+        snake_case: convention utilisée par Python
+         */
+
+
+        final double LONGUEUR = 15.6;
 
         final int i =25;
         //i = 55;
