@@ -8,3 +8,6 @@
 - Enumeration
 - Méthodes
 - Concepts Objets: Encapsulation - Héritage - Polymorphisme - Abstraction - Composition (Association) - TP
+- Exceptions
+- String
+- Date

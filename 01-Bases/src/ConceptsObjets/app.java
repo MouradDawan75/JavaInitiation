@@ -13,7 +13,7 @@ import ConceptsObjets.Heritage.Giraffe;
 
 public class app {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         /*
         Approche procédurale: repose sur l'utilisation de params et de fonctions
         Approche objets: repose sur l'utilisation de classes et d'objets

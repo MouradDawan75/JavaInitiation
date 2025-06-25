@@ -19,7 +19,7 @@ public class application {
                     2- Afficher le salaire de chaque employé
                     3- Afficher le salaire moyen de tous les employés
                     4- Quitter
-                    Votre choix:                    
+                    Votre choix:
                     """);
             int choix = sc.nextInt();
             sc.nextLine();

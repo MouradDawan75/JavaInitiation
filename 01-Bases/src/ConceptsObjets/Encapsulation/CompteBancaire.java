@@ -1,5 +1,7 @@
 package ConceptsObjets.Encapsulation;
 
+import Exceptions.SoldeException;
+
 import java.util.Objects;
 
 public class CompteBancaire extends Object{
@@ -22,11 +24,12 @@ public class CompteBancaire extends Object{
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(String numero) throws Exception {
         if(numero.length() >= 6) {
             this.numero = numero;
         }else{
-            System.out.println("Numéro doit contenir au minimum 6 caractères.");
+           // System.out.println("Numéro doit contenir au minimum 6 caractères.");
+            throw new Exception("Numéro doit contenir au minimum 6 caractères.");
         }
     }
 
@@ -40,7 +43,7 @@ public class CompteBancaire extends Object{
 
     //Constructeurs
 
-    public CompteBancaire(String numero, double solde) {
+    public CompteBancaire(String numero, double solde) throws Exception {
         this.setNumero(numero);
         this.solde = solde;
     }
@@ -53,11 +56,12 @@ public class CompteBancaire extends Object{
         this.solde += montant;
     }
 
-    public void retrait(double montant){
+    public void retrait(double montant) throws SoldeException {
         if(this.solde >= montant){
             this.solde -= montant;
         }else{
-            System.out.println("Solde insuffisant.....");
+            //System.out.println("Solde insuffisant.....");
+            throw new SoldeException("Solde insuffisant......");
         }
     }
 
